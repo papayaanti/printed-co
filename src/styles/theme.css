@@ -1,0 +1,58 @@
+:root {
+  --font-size: 16px;
+  --background: #f1f2f4;
+  --foreground: #585157;
+  --border: rgba(0, 0, 0, 0.1);
+  --ring: #807b7f;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+h1, h2, h3, h4, p { margin: 0; }
+
+h1 { font-size: 1.5rem; font-weight: var(--font-weight-medium); line-height: 1.5; }
+h2 { font-size: 1.25rem; font-weight: var(--font-weight-medium); line-height: 1.5; }
+h3 { font-size: 1.125rem; font-weight: var(--font-weight-medium); line-height: 1.5; }
+h4 { font-size: 1rem; font-weight: var(--font-weight-medium); line-height: 1.5; }
+label { font-size: 1rem; font-weight: var(--font-weight-medium); line-height: 1.5; }

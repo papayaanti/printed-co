@@ -1,0 +1,130 @@
+{
+  "products": [
+    {
+      "id": "fish-biology-print",
+      "name": "fish biology print",
+      "price": 25.72,
+      "type": "print",
+      "size": "a3",
+      "image": "/images/fish-biology-print.jpg",
+      "description": "A beautifully detailed scientific illustration of fish anatomy and biology. Printed on archival-quality paper. Perfect for the science lover or marine enthusiast."
+    },
+    {
+      "id": "toronto-painting",
+      "name": "toronto painting",
+      "price": 50.25,
+      "type": "painting",
+      "size": "11x17",
+      "image": "/images/toronto-painting.jpg",
+      "description": "A vibrant acrylic painting capturing the Toronto skyline at golden hour. Each piece is unique and hand-finished by the artist."
+    },
+    {
+      "id": "manta-keychain",
+      "name": "manta keychain",
+      "price": 15.10,
+      "type": "keychain",
+      "size": "2.5in",
+      "image": "/images/manta-keychain.jpg",
+      "description": "An manta ray keychain. Laser cut acrylic with PVC printing and a stainless steel ring."
+    },
+    {
+      "id": "blob-print",
+      "name": "blob print",
+      "price": 25.72,
+      "type": "print",
+      "size": "a3",
+      "image": "/images/blob-print.jpg",
+      "description": "Abstract blob forms to add life to your wall. This piece is an 8x10 print on linen textured, 300gsm cardstock. All prints are designed by our artists and made in house with high grade materials to ensure you get art rooted in quality and creativity."
+    },
+    {
+      "id": "angel-mini-print",
+      "name": "angel mini print",
+      "price": 25.72,
+      "type": "print",
+      "size": "a5",
+      "image": "/images/angel-mini-print.jpg",
+      "description": "A mini print featuring a stylized angel figure. This piece is an 5x4 print on linen textured, 300gsm cardstock. All prints are designed by our artists and made in house with high grade materials to ensure you get art rooted in quality and creativity."
+    },
+    {
+      "id": "salmon-keychain",
+      "name": "salmon keychain",
+      "price": 15.10,
+      "type": "keychain",
+      "size": "2.5in",
+      "image": "/images/salmon-keychain.jpg",
+      "description": "A salmon keychain. Laser cut beechwood with engravings and a stainless steel ring"
+    },
+    {
+      "id": "ocean-poster",
+      "name": "ocean poster",
+      "price": 35.00,
+      "type": "poster",
+      "size": "11x17",
+      "image": "/images/ocean-poster.jpg",
+      "description": "An ocean landscape poster. Printed on premium heavyweight matte stock."
+    },
+    {
+      "id": "botanical-print",
+      "name": "botanical print",
+      "price": 22.50,
+      "type": "print",
+      "size": "a4",
+      "image": "/images/botanical-print.jpg",
+      "description": "A botanical illustration featuring rare plant specimens."
+    },
+    {
+      "id": "cityscape-painting",
+      "name": "cityscape painting",
+      "price": 75.00,
+      "type": "painting",
+      "size": "8x10",
+      "image": "/images/cityscape-painting.jpg",
+      "description": "An expressive cityscape painting with gestural brushwork and a warm evening palette. One of a kind."
+    },
+    {
+      "id": "mountain-poster",
+      "name": "mountain poster",
+      "price": 30.00,
+      "type": "poster",
+      "size": "a3",
+      "image": "/images/mountain-poster.jpg",
+      "description": "Mountain peaks in clean geometric forms. Printed on heavyweight cardstock."
+    },
+    {
+      "id": "cat-keychain",
+      "name": "cat keychain",
+      "price": 12.00,
+      "type": "keychain",
+      "size": "2.5in",
+      "image": "/images/cat-keychain.jpg",
+      "description": "A cat face keychain featuring laser cut beechwood and hand painted decals."
+    },
+    {
+      "id": "wildflower-print",
+      "name": "wildflower print",
+      "price": 25.72,
+      "type": "print",
+      "size": "a4",
+      "image": "/images/wildflower-print.jpg",
+      "description": "Wildflowers illustrated in fine pen and watercolour wash."
+    },
+    {
+      "id": "sunrise-poster",
+      "name": "sunrise poster",
+      "price": 28.00,
+      "type": "poster",
+      "size": "a4",
+      "image": "/images/sunrise-poster.jpg",
+      "description": "A sunrise poster that makes your room feel like morning."
+    },
+    {
+      "id": "abstract-painting",
+      "name": "abstract painting",
+      "price": 90.00,
+      "type": "painting",
+      "size": "11x17",
+      "image": "/images/abstract-painting.jpg",
+      "description": "Abstract forms that convey a statement for collectors."
+    }
+  ]
+}
