@@ -452,75 +452,77 @@ function CartPage({ items, onQtyChange, onRemove, onCheckout, onShop }) {
   const total = subtotal + tax;
 
   return (
-    <main className="px-8 py-8 max-w-[860px]">
-      <h1 className="font-bold text-[#585157] text-[5rem] leading-none mb-10">my cart</h1>
-      {items.length === 0 ? (
-        <div className="flex flex-col items-center gap-8 py-20">
-          <p className="text-[#807b7f] text-2xl">Your cart is empty.</p>
-          <button className="bg-[#807b7f] text-white font-bold rounded-full py-4 px-12 text-xl hover:bg-[#6b6669] transition-colors" onClick={onShop}>
-            continue shopping
-          </button>
-        </div>
-      ) : (
-        <>
-          <div className="flex flex-col gap-8">
-            {items.map((item) => (
-              <div key={item.product.id} className="flex items-center gap-6">
-                <div className="bg-[#d9d9d9] rounded-[24px] w-[220px] h-[220px] flex-shrink-0 overflow-hidden">
-                  {item.product.image && (
-                    <img src={item.product.image} alt={item.product.name} className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = "none"; }} />
-                  )}
-                </div>
-                <div className="flex flex-col gap-2">
-                  <p className="font-bold text-[#585157] text-3xl leading-tight">{item.product.name}</p>
-                  <p className="text-[#585157] text-3xl">{formatPrice(item.product.price)} CAD</p>
-                  <div className="flex items-center gap-3 mt-2">
-                    <div className="relative bg-[#d9d9d9] rounded-full h-[52px] w-[90px] flex items-center justify-center">
-                      <span className="text-[#585157] text-2xl select-none">{item.quantity}</span>
-                      <div className="absolute right-2.5 flex flex-col gap-0.5">
-                        <button onClick={() => onQtyChange(item.product.id, item.quantity + 1)} className="text-[#585157] hover:opacity-50 transition-opacity">
-                          <ChevronUp size={13} strokeWidth={3} />
-                        </button>
-                        <button onClick={() => onQtyChange(item.product.id, Math.max(1, item.quantity - 1))} className="text-[#585157] hover:opacity-50 transition-opacity">
-                          <ChevronDown size={13} strokeWidth={3} />
-                        </button>
+    <div className="oopsfixthislol">
+      <main className="px-8 py-8 max-w-[860px]">
+        <h1 className="font-bold text-[#585157] text-[5rem] leading-none mb-10">my cart</h1>
+        {items.length === 0 ? (
+          <div className="flex flex-col items-center gap-8 py-20">
+            <p className="text-[#807b7f] text-2xl">Your cart is empty.</p>
+            <button className="bg-[#807b7f] text-white font-bold rounded-full py-4 px-12 text-xl hover:bg-[#6b6669] transition-colors" onClick={onShop}>
+              continue shopping
+            </button>
+          </div>
+        ) : (
+          <>
+            <div className="flex flex-col gap-8">
+              {items.map((item) => (
+                <div key={item.product.id} className="flex items-center gap-6">
+                  <div className="bg-[#d9d9d9] rounded-[24px] w-[220px] h-[220px] flex-shrink-0 overflow-hidden">
+                    {item.product.image && (
+                      <img src={item.product.image} alt={item.product.name} className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = "none"; }} />
+                    )}
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-bold text-[#585157] text-3xl leading-tight">{item.product.name}</p>
+                    <p className="text-[#585157] text-3xl">{formatPrice(item.product.price)} CAD</p>
+                    <div className="flex items-center gap-3 mt-2">
+                      <div className="relative bg-[#d9d9d9] rounded-full h-[52px] w-[90px] flex items-center justify-center">
+                        <span className="text-[#585157] text-2xl select-none">{item.quantity}</span>
+                        <div className="absolute right-2.5 flex flex-col gap-0.5">
+                          <button onClick={() => onQtyChange(item.product.id, item.quantity + 1)} className="text-[#585157] hover:opacity-50 transition-opacity">
+                            <ChevronUp size={13} strokeWidth={3} />
+                          </button>
+                          <button onClick={() => onQtyChange(item.product.id, Math.max(1, item.quantity - 1))} className="text-[#585157] hover:opacity-50 transition-opacity">
+                            <ChevronDown size={13} strokeWidth={3} />
+                          </button>
+                        </div>
                       </div>
+                      <button className="bg-[#d9d9d9] rounded-full h-[52px] px-7 text-[#585157] font-bold text-xl hover:bg-[#c5c5c5] transition-colors" onClick={() => onRemove(item.product.id)}>
+                        remove
+                      </button>
                     </div>
-                    <button className="bg-[#d9d9d9] rounded-full h-[52px] px-7 text-[#585157] font-bold text-xl hover:bg-[#c5c5c5] transition-colors" onClick={() => onRemove(item.product.id)}>
-                      remove
-                    </button>
                   </div>
                 </div>
+              ))}
+            </div>
+            <div className="mt-10 border-t border-[#585157] pt-6">
+              <div className="flex flex-col items-end gap-2 mb-8">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-[#807b7f] text-lg w-24 text-right">subtotal</span>
+                  <span className="text-[#585157] text-2xl w-36 text-right">{formatPrice(subtotal)}</span>
+                  <span className="text-[#585157] text-base">CAD</span>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-[#807b7f] text-lg w-24 text-right">tax (13%)</span>
+                  <span className="text-[#585157] text-2xl w-36 text-right">{formatPrice(tax)}</span>
+                  <span className="text-[#585157] text-base">CAD</span>
+                </div>
+                <div className="flex items-baseline gap-2 mt-2 pt-3 border-t border-[#585157] w-full justify-end">
+                  <span className="text-[#585157] text-2xl">=</span>
+                  <span className="font-bold text-[#585157] text-5xl">{total.toFixed(2)}</span>
+                  <span className="text-[#585157] text-xl">CAD</span>
+                </div>
               </div>
-            ))}
-          </div>
-          <div className="mt-10 border-t border-[#585157] pt-6">
-            <div className="flex flex-col items-end gap-2 mb-8">
-              <div className="flex items-baseline gap-2">
-                <span className="text-[#807b7f] text-lg w-24 text-right">subtotal</span>
-                <span className="text-[#585157] text-2xl w-36 text-right">{formatPrice(subtotal)}</span>
-                <span className="text-[#585157] text-base">CAD</span>
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-[#807b7f] text-lg w-24 text-right">tax (13%)</span>
-                <span className="text-[#585157] text-2xl w-36 text-right">{formatPrice(tax)}</span>
-                <span className="text-[#585157] text-base">CAD</span>
-              </div>
-              <div className="flex items-baseline gap-2 mt-2 pt-3 border-t border-[#585157] w-full justify-end">
-                <span className="text-[#585157] text-2xl">=</span>
-                <span className="font-bold text-[#585157] text-5xl">{total.toFixed(2)}</span>
-                <span className="text-[#585157] text-xl">CAD</span>
+              <div className="flex justify-center">
+                <button className="bg-[#807b7f] text-white font-bold rounded-full py-5 px-14 text-2xl hover:bg-[#6b6669] transition-colors active:scale-95" onClick={onCheckout}>
+                  proceed to checkout
+                </button>
               </div>
             </div>
-            <div className="flex justify-center">
-              <button className="bg-[#807b7f] text-white font-bold rounded-full py-5 px-14 text-2xl hover:bg-[#6b6669] transition-colors active:scale-95" onClick={onCheckout}>
-                proceed to checkout
-              </button>
-            </div>
-          </div>
-        </>
-      )}
-    </main>
+          </>
+        )}
+      </main>
+    </div>
   );
 }
 

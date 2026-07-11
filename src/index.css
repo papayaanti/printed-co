@@ -2,6 +2,12 @@
 @import './styles/theme.css';
 @import './styles/utilities.css';
 
+.oopsfixthislol{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
